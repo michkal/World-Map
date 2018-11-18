@@ -1,0 +1,129 @@
+.zoomBtn {
+  color: #494949 !important;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 20px;
+  border: 4px solid #494949 !important;
+  border-radius: 6px;
+}
+
+.zoomBtn:hover {
+  color: #ffffff !important;
+  background: rgba(19, 6, 11, 0.56);
+  border-color: rgba(255, 60, 162, 0) !important;
+  transition: all 0.4s ease 0s;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.weather-grid-container {
+  width: 100%;
+  margin-top: 50px;
+  .weather-grid-row {
+    &:before, &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    [class*="col-"] {
+      float: left;
+      min-height: 1px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.weather-row1 .weather-grid-col-1 {
+  width: 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.weather-row1 .weather-grid-col-2 {
+  width: 64%;
+}
+
+.weather-row1 .weather-grid-col-3 {
+  width: 18%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+path {
+  outline: 0;
+}
+
+.infoTable {
+  margin-top: 5%;
+
+}
+
+table {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  border: 1px solid transparent;
+  height: 30px;
+  transition: all 0.3s;
+}
+
+th {
+  background: #DFDFDF;
+  font-weight: bold;
+}
+
+td {
+  background: #FAFAFA;
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background: #F1F1F1;
+}
+
+tr:nth-child(odd) td {
+  background: #FEFEFE;
+}
+
+tr td:hover {
+  background: #666;
+  color: #FFF;
+}
+
+@media screen and (max-width: 900px) {
+  .weather-grid-container .weather-row1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .weather-row1 .weather-grid-col-2 {
+    order: 1;
+    width: 100%;
+    align-items: center;
+  }
+  .weather-row1 .weather-grid-col-1 {
+    order: 2;
+    width: 100%;
+    align-items: center;
+  }
+  .weather-row1 .weather-grid-col-1 div .zoomBtn {
+    padding: 5px;
+  }
+  .weather-row1 .weather-grid-col-3 {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+

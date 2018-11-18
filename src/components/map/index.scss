@@ -1,0 +1,128 @@
+.zoomBtn {
+  color: #494949 !important;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 20px;
+  border: 4px solid #494949 !important;
+  border-radius: 6px;
+}
+.zoomBtn:hover {
+  color: #ffffff !important;
+  background: rgba(19, 6, 11, 0.56);
+  border-color: rgba(255, 60, 162, 0) !important;
+  transition: all 0.4s ease 0s;
+}
+
+.main-grid-container {
+  width: 100%;
+
+
+  margin-top: 50px;
+  .main-grid-row {
+    &:before, &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    [class*="col-"] {
+      float: left;
+      min-height: 1px;
+      text-align: center;
+      box-sizing: border-box;
+
+    }
+  }
+}
+
+.main-row1 .main-grid-col-1 {
+  width: 18%;
+
+}
+.main-row1 .main-grid-col-2 {
+  width: 64%;
+}
+.main-row1 .main-grid-col-3 {
+  width: 18%;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .main-grid-container .main-row1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-row1 .main-grid-col-2 {
+    order: 1;
+    width: 100%;
+    align-items: center;
+  }
+  .main-row1 .main-grid-col-1 {
+    order: 2;
+    width: 100%;
+    align-items: center;
+  }
+  .main-row1 .main-grid-col-3 {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+.pull{
+  position:absolute;
+  right:10px;
+  top:50%;
+  margin-top:-10px;
+}
+
+.overlay{
+  display:none;
+  position:absolute;
+  top:0;
+  background-color:rgba(0,0,0,.7);
+  width:100%;
+  height:100%;
+}
+
+.iconContainer{
+  width:200px;
+  height:200px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-100px;
+  margin-top:-100px;
+  & p{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    margin:0;
+    font-size:20px;
+    opacity:0;
+  }
+}
+
+.phone{
+  position:relative;
+  left:50%;
+  margin-left:-50px;
+  width:0;
+  height:0;
+  border:0 solid #000;
+  background:#a9a9a9;
+  border-radius:10px;
+  box-sizing:border-box;
+  & i{
+    text-align:center;
+    width:100%;
+    line-height:120px;
+    font-size:50px;
+    color:#454545;
+    opacity:0;
+  }
+}
