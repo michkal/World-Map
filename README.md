@@ -1,7 +1,7 @@
 # World-Map
 
 ### Demo
-Here is a working live: http://hospitable-straw.surge.sh
+Here is a working live: http://flamboyant-almeida-57b10c.netlify.com/#/
 
 ### Description
 
