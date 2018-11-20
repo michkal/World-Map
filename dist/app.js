@@ -40977,7 +40977,7 @@ var WheatherMap = exports.WheatherMap = function (_Component) {
                 return responseJSON;
             }).then(function (countryResponse) {
                 var capital = countryResponse.capital;
-                return fetch("http://api.openweathermap.org/data/2.5/weather?q=" + capital + "," + choosedId + "&appid=10eb81806cfbf78d019f86d8b20a1e04&lang={pl}");
+                return fetch("https://api.openweathermap.org/data/2.5/weather?q=" + capital + "," + choosedId + "&appid=10eb81806cfbf78d019f86d8b20a1e04&lang={pl}");
             }).then(function (result) {
                 if (result.ok) {
                     return result.json();
